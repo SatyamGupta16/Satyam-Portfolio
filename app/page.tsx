@@ -141,7 +141,7 @@ export default function Home() {
               <button className="px-8 py-4 bg-gradient-to-r from-violet-500 to-pink-500 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 animate-glow cursor-pointer whitespace-nowrap"><a href="/projects" className="text-gray-300 hover:text-violet-300 transition-colors cursor-pointer">
                 View My Work</a>
               </button>
-              <button className="px-8 py-4 border-2 border-violet-400 text-violet-400 font-semibold rounded-full hover:bg-violet-400 hover:text-white transition-all duration-300 cursor-pointer whitespace-nowrap"><a href="/images/satyam_resume.docx">
+              <button className="px-8 py-4 border-2 border-violet-400 text-violet-400 font-semibold rounded-full hover:bg-violet-400 hover:text-white transition-all duration-300 cursor-pointer whitespace-nowrap"><a href="/images/satyam_resume.pdf">
                 Download CV</a>
               </button>
             </div>
