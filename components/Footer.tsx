@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function Footer() {
   const socialLinks = [
     { icon: 'ri-github-line', href: 'https://github.com/SatyamGupta16', label: 'GitHub' },
-    { icon: 'ri-linkedin-line', href: 'https://www.linkedin.com/in/satyam-gupta-94765725b/', label: 'LinkedIn' },
+    { icon: 'ri-linkedin-line', href: 'https://www.linkedin.com/in/satyam-gupta-dev/', label: 'LinkedIn' },
     { icon: 'ri-instagram-line', href: 'https://www.instagram.com/satyamgupta.16/', label: 'Instagram' }
   ];
 
