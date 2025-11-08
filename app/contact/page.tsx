@@ -58,7 +58,7 @@ export default function Contact() {
   ];
 
   const socialLinks = [
-    { icon: 'ri-linkedin-line', name: 'LinkedIn', href: 'https://www.linkedin.com/in/satyam-gupta-94765725b/', color: 'hover:text-blue-400' },
+    { icon: 'ri-linkedin-line', name: 'LinkedIn', href: 'https://www.linkedin.com/in/satyam-gupta-dev/', color: 'hover:text-blue-400' },
     { icon: 'ri-github-line', name: 'GitHub', href: 'https://github.com/SatyamGupta16', color: 'hover:text-gray-400' },
     { icon: 'ri-instagram-line', name: 'Instagram', href: 'https://www.instagram.com/satyamgupta.16/', color: 'hover:text-pink-400' },
   ];
