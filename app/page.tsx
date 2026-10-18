@@ -39,12 +39,12 @@ export default function Home() {
 
   const projects = [
     {
-      title: 'Pet Adoption Viewer Platform',
-      description: 'A user-friendly pet adoption platform with smart filters, pet profiles, request management, and admin tools.',
-      image: '/images/pet_care.jpg',
-      tags: ['Next.js','React', 'Node.js', '+2'],
-      link: 'https://day-21-pet-adoption-viewer.vercel.app/'
-    },
+  title: 'Healthcare Prediction & Diagnosis System',
+  description: 'An ML-powered healthcare platform for disease prediction, patient management, health analytics, and digital prescriptions.',
+  image: '/images/healthcare_prediction.png',
+  tags: ['Next.js', 'Python', 'Machine Learning', 'Supabase', '+2'],
+  link: 'https://healthcare-app-black.vercel.app/'
+},
     {
       title: 'Snake Game',
       category: 'fullstack',

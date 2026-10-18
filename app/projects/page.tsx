@@ -7,13 +7,13 @@ export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('all');
   const projects = [
     {
-      title: 'Pet Adoption Viewer',
+      title: 'Healthcare Prediction & Diagnosis System',
       category: 'fullstack',
-      description: 'A user-friendly pet adoption platform with smart filters, pet profiles, request management, and admin tools.',
-      image: '/images/pet_care.jpg',
-      tags: ['Next.js','React', 'Node.js', 'MongoDB', 'Postman'],
-      demo: 'https://day-21-pet-adoption-viewer.vercel.app/',
-      github: 'https://github.com/SatyamGupta16/Day-21-Pet-Adoption-Viewer',
+      description: 'An ML-powered healthcare platform for disease prediction, patient management, health analytics, and digital prescriptions.',
+      image: '/images/healthcare_prediction.png',
+      tags: ['Next.js', 'Python', 'Machine Learning', 'Supabase', 'FastAPI'],
+      demo: 'https://healthcare-app-black.vercel.app/',
+      github: 'https://github.com/SatyamGupta16/IIOT-ML-PROJECT',
       featured: true
     },
     {
@@ -88,9 +88,9 @@ export default function Projects() {
     },
     {
       title: 'Movies Search App',
-      category: 'fullstack',
+      category: 'frontend',
       description: 'Movie search application with dynamic filtering, real-time results, API integration, and responsive design',
-      image:'/images/movies_searach_app.jpg',
+      image: '/images/movies_searach_app.jpg',
       tags: ['Html', 'CSS', 'JavaScript'],
       demo: 'https://satyamgupta16.github.io/Day-8-Movies-Search-App/',
       github: 'https://github.com/SatyamGupta16/Day-8-Movies-Search-App',
@@ -128,7 +128,7 @@ export default function Projects() {
     },
     {
       title: 'Snake Game',
-      category: 'fullstack',
+      category: 'frontend',
       description: 'A fun and responsive snake game using HTML, CSS, and JavaScript with dynamic gameplay and score tracking.',
       image: '/images/snake.png',
       tags: ['Html', 'CSS', 'JavaScript'],
@@ -148,7 +148,7 @@ export default function Projects() {
     },
     {
       title: 'Random Jokes Generator',
-      category: 'fullstack',
+      category: 'frontend',
       description: 'Interactive business intelligence dashboard with real-time data visualization and comprehensive reporting.',
       image: '/images/jrd.jpg',
       tags: ['Html', 'CSS', 'JavaScript'],
@@ -208,7 +208,7 @@ export default function Projects() {
     },
     {
       title: 'QR Code Generator',
-      category: 'fullstack',
+      category: 'frontend',
       description: 'A sleek QR code generator using HTML, CSS, and JavaScript with instant preview, download option, and customization features.',
       image: '/images/qrcg.jpg',
       tags: ['Html', 'CSS', 'JavaScript'],
@@ -251,7 +251,7 @@ export default function Projects() {
       category: 'mobile',
       description: 'Beautiful weather application with detailed forecasts, interactive maps, and location-based alerts.',
       image: '/images/LVF.jpg',
-      tags: ['Html', 'CSS', 'JavaScript','NEXT.JS'],
+      tags: ['Html', 'CSS', 'JavaScript', 'NEXT.JS'],
       demo: 'https://day-26-form-validator-app.vercel.app/',
       github: 'https://github.com/SatyamGupta16/Day-26-Form-Validator-App',
       featured: false
@@ -271,7 +271,7 @@ export default function Projects() {
       category: 'mobile',
       description: 'Beautiful weather application with detailed forecasts, interactive maps, and location-based alerts.',
       image: '/images/ds.jpg',
-      tags: ['Html', 'CSS', 'JavaScript', 'NEXT.JS','Tailwind CSS'],
+      tags: ['Html', 'CSS', 'JavaScript', 'NEXT.JS', 'Tailwind CSS'],
       demo: 'https://day-28-survey-pdf.vercel.app/#',
       github: 'https://github.com/SatyamGupta16/Day-28-survey-pdf',
       featured: false
@@ -294,6 +294,17 @@ export default function Projects() {
       tags: ['Html', 'CSS', 'JavaScript'],
       github: 'https://github.com/SatyamGupta16/Day-30-GOOGLE-AUTHENTICATION-APP',
       featured: false
+    },
+    {
+      title: 'Student Project Showcase',
+      category: 'fullstack',
+      description: 'A full-stack platform for showcasing student profiles, projects, portfolios, and achievements with role-based dashboards.',
+      image: '/images/student_showcase.png',
+      tags: ['Next.js', 'TypeScript', 'Node.js', 'MongoDB', '+2'],
+      demo: 'https://student-showcase-frontend.vercel.app/',
+      github: 'https://github.com/SatyamGupta16/StudentShowcase-Frontend',
+      backendGithub: 'https://github.com/SatyamGupta16/StudentShowcase-Backend',
+      featured: true
     }
   ];
 
@@ -304,8 +315,8 @@ export default function Projects() {
     { key: 'mobile', label: 'Mobile' }
   ];
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
+  const filteredProjects = activeFilter === 'all'
+    ? projects
     : projects.filter(project => project.category === activeFilter);
 
   const featuredProjects = projects.filter(project => project.featured);
@@ -313,7 +324,7 @@ export default function Projects() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navbar />
-      
+
       <section className="pt-24 pb-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -331,11 +342,10 @@ export default function Projects() {
                 <button
                   key={filter.key}
                   onClick={() => setActiveFilter(filter.key)}
-                  className={`px-6 py-3 rounded-full font-medium transition-all duration-300 cursor-pointer whitespace-nowrap ${
-                    activeFilter === filter.key
+                  className={`px-6 py-3 rounded-full font-medium transition-all duration-300 cursor-pointer whitespace-nowrap ${activeFilter === filter.key
                       ? 'bg-violet-500 text-white'
                       : 'glass-effect text-gray-300 hover:text-white'
-                  }`}
+                    }`}
                 >
                   {filter.label}
                 </button>
@@ -347,8 +357,8 @@ export default function Projects() {
             {filteredProjects.map((project, index) => (
               <div key={index} className="glass-effect rounded-2xl overflow-hidden hover-lift group">
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-48 object-cover object-top group-hover:scale-110 transition-transform duration-500"
                   />
@@ -361,11 +371,11 @@ export default function Projects() {
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                
+
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">{project.description}</p>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.slice(0, 3).map((tag, tagIndex) => (
                       <span key={tagIndex} className="px-3 py-1 bg-violet-500/20 text-violet-300 rounded-full text-sm font-medium">
@@ -378,7 +388,7 @@ export default function Projects() {
                       </span>
                     )}
                   </div>
-                  
+
                   <div className="flex gap-3">
                     <a href={project.demo} className="flex items-center text-violet-400 hover:text-pink-400 transition-colors font-semibold cursor-pointer">
                       <div className="w-4 h-4 flex items-center justify-center mr-2">
